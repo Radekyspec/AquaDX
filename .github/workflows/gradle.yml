@@ -22,11 +22,11 @@ jobs:
         mkdir data
         bash ./src/main/resources/meta/update.sh
         chmod +x gradlew
-        ./gradlew clean build
+        ./gradlew build
 
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v4
       with:
-        name: "aquadx-latest.zip"
+        name: "aquadx-latest"
         path: ./build/libs
         compression-level: 0
